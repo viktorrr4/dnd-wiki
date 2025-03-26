@@ -49,6 +49,9 @@ $logout = function (Logout $logout) {
                     </x-slot>
 
                     <x-slot name="content">
+                        <x-dropdown-link :href="route('spells')" wire:navigate>
+                            {{ __('Spells Page') }}
+                        </x-dropdown-link>
                         <x-dropdown-link :href="route('profile')" wire:navigate>
                             {{ __('Profile') }}
                         </x-dropdown-link>
@@ -91,6 +94,9 @@ $logout = function (Logout $logout) {
             </div>
 
             <div class="mt-3 space-y-1">
+                <x-responsive-nav-link :href="route('spells')" wire:navigate>
+                    {{ __('Spells Page') }}
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('profile')" wire:navigate>
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
